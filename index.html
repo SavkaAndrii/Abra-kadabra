@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="images/png" href="images/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <script src="js/gsap.min.js" defer></script>
+  <script src="js/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <title>Abrakadabra</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="main-container">
+      <nav class="header__inner">
+        <div class="header__menu js-burger-toggle-colapse-spin">
+          <div class="menu__button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="list__left">
+          <li class="list__item">
+            <a data-goto="page-section-1" class="list__link" data-lang-pl="O nas" data-lang-ua="Про нас"
+              data-lang-en="About us" href="#">O nas</a>
+          </li>
+          <li class="list__item">
+            <a data-goto="page-section-2" class="list__link" data-lang-pl="Usługi" data-lang-ua="Послуги"
+              data-lang-en="Services" href="#">Usługi</a>
+          </li>
+          <li class="list__item">
+            <a data-goto="page-section-3" class="list__link" data-lang-pl="Galeria" data-lang-ua="Галерея"
+              data-lang-en="Gallery" href="#">Galeria</a>
+          </li>
+        </ul>
+        <div class="logo">
+          <img class="list__logo" src="images/logo.png" alt="Logo Abrakadabra">
+        </div>
+        <div class="header__right-wrap">
+          <ul class="list__right">
+            <li class="list__item">
+              <a data-goto="page-section-4" class="list__link" data-lang-pl="Jak to działa" data-lang-ua="Як це працює"
+                data-lang-en="How it works" href="#">Jak to działa</a>
+            </li>
+            <li class="list__item">
+              <a data-goto="page-section-5" class="list__link" data-lang-pl="Opinie" data-lang-ua="Відгуки"
+                data-lang-en="Testimonials" href="#">Opinije</a>
+            </li>
+          </ul>
+          <div class="lang-switcher">
+            <button class="button__lang" type="button" id="lang-toggle">PL</button>
+          </div>
+        </div>
+        <!-- mobile list -->
+        <div class="mobile__menu">
+          <ul class="mobile__list">
+            <li class="list__item list__item-moble">
+              <a data-goto="page-section-1" class="list__link" data-lang-pl="O nas" data-lang-ua="Про нас"
+                data-lang-en="About us" href="">O nas</a>
+            </li>
+            <li class="list__item list__item-moble">
+              <a data-goto="page-section-2" class="list__link" data-lang-pl="Usługi" data-lang-ua="Послуги"
+                data-lang-en="Services" href="#">Usługi</a>
+            </li>
+            <li class="list__item list__item-moble">
+              <a data-goto="page-section-3" class="list__link" data-lang-pl="Galeria" data-lang-ua="Галерея"
+                data-lang-en="Gallery" href="#">Galeria</a>
+            </li>
+            <li class="list__item list__item-moble">
+              <a data-goto="page-section-4" class="list__link" data-lang-pl="Jak to działa" data-lang-ua="Як це працює"
+                data-lang-en="How it works" href="#">Jak to działa</a>
+            </li>
+            <li class="list__item list__item-moble">
+              <a data-goto="page-section-5" class="list__link" data-lang-pl="Opinie" data-lang-ua="Відгуки"
+                data-lang-en="Testimonials" href="#">Opinije</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="main-screen">
+      <div class="main-screen__img">
+        <img class="main-screen__images" src="images/main-screen_1.jpg" alt="">
+      </div>
+      <div class="main-screen__content">
+        <h1 class="main-screen__title" data-lang-pl="Podaruj emocje poprzez prezenty"
+          data-lang-ua="Подаруй емоції через подарунки" data-lang-en="Give emotions through gifts">Podaruj emocje
+          poprzez prezenty</h1>
+        <h3 class="main-screen__subtitle" data-lang-pl="Dostarczamy emocje, które zostają na długo"
+          data-lang-ua="Ми даруємо емоції, які залишаються надовго"
+          data-lang-en="We deliver emotions that stay forever">Dostarczamy emocje, które zostają na długo</h3>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about__img">
+        <img class="about__images" src="images/about-bg.jpg" alt="about">
+      </div>
+      <div class="about__content">
+        <h2 class="about__title title" data-lang-pl="O nas" data-lang-ua="Про нас" data-lang-en="About us">O nas</h2>
+        <h4 class="about-sub__title sub__title" data-lang-pl="Kiedy emocje podróżują kilometrami"
+          data-lang-ua="Коли емоції долають відстані" data-lang-en="When emotions travel across miles">Kiedy emocje
+          podróżują kilometrami</h4>
+        <p class="about__text text"
+          data-lang-pl="Historia 'Abracadabry'. Wszystko zaczęło się od słowa, które od dawna czyni cuda – 'Abracadabra'. Przekształciliśmy je w misję: przekazać magię emocji tam, gdzie uściski wydają się nieosiągalne. Firma 'Abracadabra' powstała, aby przekazywać pozdrowienia na żywo – z serca do serca, z dowolnego miejsca na świecie. Każde nasze pozdrowienie jest przejawem miłości, która jednoczy bliskich pomimo odległości. 'Abracadabra' – czynimy cuda tam, gdzie są najbardziej potrzebne."
+          data-lang-ua="Історія 'Абракадабри'. Усе почалося зі слова, яке здавна творило дива — 'Абракадабра'. Ми перетворили його на місію: передавати магію емоцій там, де обійми здаються недосяжними. Компанія 'Абракадабра' створена, щоб дарувати живі привітання — від серця до серця, з будь-якої точки світу. Кожне наше привітання — це прояв любові, який об'єднує рідних, незважаючи на відстань. 'Абракадабра' — ми даруємо дива там, де вони потрібні найбільше."
+          data-lang-en="The story of 'Abracadabra'. It all started with a word that has long worked wonders – 'Abracadabra'. We turned it into a mission: to deliver the magic of emotions where hugs seem out of reach. 'Abracadabra' was founded to deliver live greetings – from heart to heart, from anywhere in the world. Each greeting is an expression of love that unites loved ones despite the distance. 'Abracadabra' – we bring magic where it’s needed most.">
+          Historia 'Abracadabry' Wszystko zaczęło się od słowa, które od dawna czyni cuda – 'Abracadabra'.
+          Przekształciliśmy je w misję: przekazać magię emocji tam, gdzie uściski wydają się nieosiągalne. Firma
+          'Abracadabra' powstała, aby przekazywać pozdrowienia na żywo – z serca do serca, z dowolnego miejsca na
+          świecie. Każde nasze pozdrowienie jest przejawem miłości, która jednoczy bliskich pomimo odległości.
+          'Abracadabra' – czynimy cuda tam, gdzie są najbardziej potrzebne.
+        </p>
+        <button class="about__button" type="button">Założyciele</button>
+      </div>
+    </section>
+
+
+  </main>
+
+
+
+</body>
+
+</html>
