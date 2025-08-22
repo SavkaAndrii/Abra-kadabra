@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
-    url('../fonts/Roboto-Regular.woff') format('woff');
+  src: url('./fonts/Roboto-Regular.woff2') format('woff2'),
+    url('./fonts/Roboto-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: 'Lobster';
-  src: url('../fonts/Lobster-Regular.woff2') format('woff2'),
-    url('../fonts/Lobster-Regular.woff') format('woff');
+  src: url('./fonts/Lobster-Regular.woff2') format('woff2'),
+    url('./fonts/Lobster-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
