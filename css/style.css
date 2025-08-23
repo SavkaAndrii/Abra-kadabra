@@ -296,6 +296,10 @@ span {
   gap: clamp(1rem, 3vw, 3rem);
 }
 
+.about-sub__title {
+  text-align: center;
+}
+
 .about__text {
   text-align: center;
   line-height: 1.2;
