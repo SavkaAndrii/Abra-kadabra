@@ -273,6 +273,12 @@ span {
   overflow: hidden;
 }
 
+@media (min-width: 1440px) {
+  .about {
+    min-height: 95vh;
+  }
+}
+
 .about__img {
   position: absolute;
   inset: 0;
