@@ -322,7 +322,7 @@ span {
   border: none;
   border-radius: 0.625rem;
   background-color: var(--purpl-color);
-  color: var(--color-bg);
+  color: var(--gold-color);
   padding: clamp(0.625rem, 5vw, 1.25rem) clamp(1.25rem, 5vw, 2.5rem);
   cursor: pointer;
 }
