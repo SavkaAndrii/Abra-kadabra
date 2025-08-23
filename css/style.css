@@ -231,6 +231,12 @@ span {
   padding-top: clamp(3.75rem, 13vw, 6.25rem);
 }
 
+@media (min-width: 1440px) {
+  .main-screen {
+    min-height: 95vh;
+  }
+}
+
 .main-screen__img {
   position: absolute;
   inset: 0;
