@@ -148,7 +148,6 @@ body {
     height: calc(100dvh - var(--header-h));
     width: 100%;
     z-index: 3000;
-    top: clamp(3.75rem, 13vw, 6.25rem);
     background-color: var(--purpl-color);
     color: var(--gold-color);
     transform: translateX(-100%);
