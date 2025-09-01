@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="images/png" href="images/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/zalozycielka.css">
+  <script src="js/gsap.min.js" defer></script>
+  <script src="js/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <title>Abrakadabra</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="main-container">
+      <nav class="header__inner">
+        <div class="header__menu js-burger-toggle-colapse-spin">
+          <div class="menu__button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="list__left">
+          <li class="list__item">
+            <a data-goto="page-section-1" class="list__link" data-lang-pl="O nas" data-lang-ua="Про нас"
+              data-lang-en="About us" href="#">O nas</a>
+          </li>
+          <li class="list__item">
+            <a data-goto="page-section-2" class="list__link" data-lang-pl="Usługi" data-lang-ua="Послуги"
+              data-lang-en="Services" href="#">Usługi</a>
+          </li>
+          <li class="list__item">
+            <a data-goto="page-section-3" class="list__link" data-lang-pl="Galeria" data-lang-ua="Галерея"
+              data-lang-en="Gallery" href="#">Galeria</a>
+          </li>
+        </ul>
+        <a href="index.html" class="logo">
+          <img class="list__logo" src="images/logo.png" alt="Logo Abrakadabra">
+        </a>
+        <div class="header__right-wrap">
+          <ul class="list__right">
+            <li class="list__item">
+              <a data-goto="page-section-4" class="list__link" data-lang-pl="Jak to działa" data-lang-ua="Як це працює"
+                data-lang-en="How it works" href="#">Jak to działa</a>
+            </li>
+            <li class="list__item">
+              <a data-goto="page-section-5" class="list__link" data-lang-pl="Opinie" data-lang-ua="Відгуки"
+                data-lang-en="Testimonials" href="#">Opinije</a>
+            </li>
+          </ul>
+          <div class="lang-switcher">
+            <button class="button__lang" type="button" id="lang-toggle">PL</button>
+          </div>
+        </div>
+        <!-- mobile list -->
+        <div class="mobile__menu">
+          <ul class="mobile__list">
+            <li class="list__item list__item-moble">
+              <a data-goto="page-section-1" class="list__link" data-lang-pl="O nas" data-lang-ua="Про нас"
+                data-lang-en="About us" href="">O nas</a>
+            </li>
+            <li class="list__item list__item-moble">
+              <a data-goto="page-section-2" class="list__link" data-lang-pl="Usługi" data-lang-ua="Послуги"
+                data-lang-en="Services" href="#">Usługi</a>
+            </li>
+            <li class="list__item list__item-moble">
+              <a data-goto="page-section-3" class="list__link" data-lang-pl="Galeria" data-lang-ua="Галерея"
+                data-lang-en="Gallery" href="#">Galeria</a>
+            </li>
+            <li class="list__item list__item-moble">
+              <a data-goto="page-section-4" class="list__link" data-lang-pl="Jak to działa" data-lang-ua="Як це працює"
+                data-lang-en="How it works" href="#">Jak to działa</a>
+            </li>
+            <li class="list__item list__item-moble">
+              <a data-goto="page-section-5" class="list__link" data-lang-pl="Opinie" data-lang-ua="Відгуки"
+                data-lang-en="Testimonials" href="#">Opinije</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="zalozycielka">
+    <div class="main-container">
+      <h2 class="zalozycielka__title"
+        data-lang-pl="Założycielka Abrakadabra – mistrz ceremonii i prowadząca imprezy w Toruniu"
+        data-lang-ua="Засновниця Abrakadabra – майстер церемоній та ведуча свят у Торуні"
+        data-lang-en="Founder of Abrakadabra – master of ceremonies and event host in Toruń">Założycielka Abrakadabra –
+        mistrz ceremonii i prowadząca imprezy w Toruniu</h2>
+      <div class="zalozycielka__inner">
+        <div class="zalozycielka__item zalozycielka__item-img">
+          <img class="zalozycielka__img" src="images/icon-social/zalozycielka.png" alt="">
+        </div>
+        <div class="zalozycielka__item zalozycielka__item-content">
+          <h4 class="zalozycielka__title-name" data-lang-pl="Zoreslava" data-lang-ua="Зореслава"
+            data-lang-en="Zoreslava">Zoreslava</h4>
+          <p class="zalozycielka__text"
+            data-lang-pl="Cześć, mam na imię Zoreslava. Jestem osobą, która szczerze kocha życie, wierzy w dobro, magię emocji i siłę ciepłych słów. Dla mnie dawanie jest ważniejsze niż otrzymywanie. Szczęście w oczach innych to coś, co mnie napędza i inspiruje. Uwielbiam tworzyć niespodzianki, wypełniać chwile światłem i sensem, a przede wszystkim dawać ludziom poczucie, że są ważni i kochani. Z tego wielkiego pragnienia narodziła się idea agencji „Abrakadabra” — przestrzeni, gdzie każde powitanie zamienia się w magiczny moment, a każda usługa w szczera troskę. Dziś jestem szczęśliwa, będąc kurierem ciepła, miłości i duchowego komfortu. Bo miłość nie zna granic."
+            data-lang-ua="Привіт, мене звати Зореслава. Я — людина, яка щиро любить життя, вірить у добро, магію емоцій і силу теплих слів. Для мене дарувати важливіше, ніж отримувати. Щастя в очах інших — це те, що заряджає і надихає. Обожнюю створювати сюрпризи, наповнювати моменти світлом і сенсом, а найголовніше — дарувати людям відчуття, що вони важливі та любимі. Саме з цього великого бажання народилась ідея агенції «Абракадабра» — простору, де кожне привітання перетворюється на чарівний момент, а кожна послуга — на щиру турботу. Сьогодні я щаслива бути кур’єром тепла, любові й душевного затишку. Бо любов не має кордонів."
+            data-lang-en="Hi, my name is Zoreslava. I am a person who truly loves life, believes in goodness, the magic of emotions, and the power of kind words. For me, giving is more important than receiving. The happiness in other people’s eyes is what energizes and inspires me. I adore creating surprises, filling moments with light and meaning, and above all — giving people the feeling that they are important and loved. From this deep desire was born the idea of the 'Abrakadabra' agency — a space where every greeting becomes a magical moment and every service is an act of genuine care. Today I am happy to be a courier of warmth, love, and soulful comfort. Because love has no borders.">
+            Cześć, mam na imię Zoreslava. Jestem osobą, która szczerze kocha życie, wierzy w
+            dobro, magię emocji i siłę ciepłych słów. Dla mnie dawanie jest ważniejsze niż otrzymywanie. Szczęście w
+            oczach innych to coś, co mnie napędza i inspiruje. Uwielbiam tworzyć niespodzianki, wypełniać chwile
+            światłem i sensem, a przede wszystkim dawać ludziom poczucie, że są ważni i kochani. Z tego wielkiego
+            pragnienia narodziła się idea agencji „Abrakadabra” — przestrzeni, gdzie każde powitanie zamienia się w
+            magiczny moment, a każda usługa w szczera troskę. Dziś jestem szczęśliwa, będąc kurierem ciepła, miłości i
+            duchowego komfortu. Bo miłość nie zna granic.</p>
+          <div class="zalozycielka__social">
+            <img class="zalozycielka__instagram" src="images/icon-social/instagram.png" alt="">
+            <img class="zalozycielka__facebook" src="images/icon-social/facebook.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
