@@ -1,6 +1,41 @@
 
 console.log('Hello world');
 
+// Прокрутка при кліку
+const menuLinks = document.querySelectorAll('.list__link[data-goto]');
+
+if (menuLinks.length) {
+  menuLinks.forEach(link => {
+    link.addEventListener('click', onMenuLinkClick);
+  });
+
+  function onMenuLinkClick(e) {
+    e.preventDefault();
+    const link = e.currentTarget;
+
+    // Підготуємо коректний селектор (додамо . якщо треба)
+    const raw = link.dataset.goto.trim();
+    const selector = (raw.startsWith('.') || raw.startsWith('#')) ? raw : '.' + raw;
+
+    const target = document.querySelector(selector);
+    if (!target) return;
+
+    const headerEl = document.querySelector('.header') || document.querySelector('header');
+    const headerH = headerEl ? headerEl.offsetHeight : 0;
+
+    const top = target.getBoundingClientRect().top + window.scrollY - headerH;
+
+    // Якщо є мобільне меню – закриємо його без помилок
+    if (window.menuButton && menuButton.classList.contains('_active')) {
+      document.body.classList.remove('_lock');
+      menuButton.classList.remove('_active');
+      menuBody && menuBody.classList.remove('_active');
+    }
+
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+}
+
 //language
 
 const languages = ["pl", "ua", "en"];
