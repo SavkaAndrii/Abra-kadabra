@@ -1,40 +1,44 @@
 
 console.log('Hello world');
 
-// Прокрутка при кліку
-const menuLinks = document.querySelectorAll('.list__link[data-goto]');
+// === Burger toggle + smooth scroll (one place) ===
+(() => {
+  const burgerBtn = document.querySelector('.js-burger-toggle-colapse-spin');
+  const mobileMenu = document.querySelector('.mobile__menu');
+  const headerEl = document.querySelector('.header') || document.querySelector('header');
 
-if (menuLinks.length) {
-  menuLinks.forEach(link => {
-    link.addEventListener('click', onMenuLinkClick);
+  // Відкрити/закрити мобільне меню
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.js-burger-toggle-colapse-spin');
+    if (!btn) return;
+    e.preventDefault();
+    btn.classList.toggle('colapse-spin');
+    mobileMenu?.classList.toggle('is-open');
   });
 
-  function onMenuLinkClick(e) {
+  // Плавний скрол по кліку на пункти меню (desktop + mobile)
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('.list__link[data-goto]');
+    if (!link) return;
+
     e.preventDefault();
-    const link = e.currentTarget;
 
-    // Підготуємо коректний селектор (додамо . якщо треба)
-    const raw = link.dataset.goto.trim();
-    const selector = (raw.startsWith('.') || raw.startsWith('#')) ? raw : '.' + raw;
-
+    // Підготуємо селектор цільової секції
+    const raw = (link.dataset.goto || '').trim();
+    const selector = (raw.startsWith('.') || raw.startsWith('#')) ? raw : `.${raw}`;
     const target = document.querySelector(selector);
     if (!target) return;
 
-    const headerEl = document.querySelector('.header') || document.querySelector('header');
     const headerH = headerEl ? headerEl.offsetHeight : 0;
-
     const top = target.getBoundingClientRect().top + window.scrollY - headerH;
 
-    // Якщо є мобільне меню – закриємо його без помилок
-    if (window.menuButton && menuButton.classList.contains('_active')) {
-      document.body.classList.remove('_lock');
-      menuButton.classList.remove('_active');
-      menuBody && menuBody.classList.remove('_active');
-    }
+    // Закриваємо мобільне меню (якщо відкрите)
+    mobileMenu?.classList.remove('is-open');
+    burgerBtn?.classList.remove('colapse-spin');
 
     window.scrollTo({ top, behavior: 'smooth' });
-  }
-}
+  });
+})();
 
 //language
 
@@ -68,18 +72,6 @@ langBtn.addEventListener("click", () => {
 
 
 // end language
-
-//burger 
-
-document.addEventListener('click', function (e) {
-  const target = e.target.closest('.js-burger-toggle-colapse-spin');
-  if (target) {
-    e.preventDefault();
-    target.classList.toggle('colapse-spin');
-    const mobileMenu = document.querySelector('.mobile__menu');
-    mobileMenu.classList.toggle('is-open')
-  }
-});
 
 
 // ========= GSAP ========
