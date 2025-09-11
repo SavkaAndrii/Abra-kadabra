@@ -369,7 +369,6 @@ span {
   color: var(--gold-color);
   font-family: 'Lobster';
   margin-bottom: 30px;
-  max-width: 350px;
 }
 
 .services__img {
