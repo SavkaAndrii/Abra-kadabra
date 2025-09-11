@@ -400,6 +400,22 @@ span {
   display: inline-block;
 }
 
+@media (hover: hover) {
+  .services__link:hover {
+    color: var(--purpl-color);
+    background-color: #FDFBF9;
+    border: 2px solid var(--purpl-color);
+  }
+}
+
+@media (hover: none) {
+  .services__link:active {
+    color: var(--purpl-color);
+    background-color: #FDFBF9;
+    border: 2px solid var(--purpl-color);
+  }
+
+
 
 /* ========== mobile ========== */
 
