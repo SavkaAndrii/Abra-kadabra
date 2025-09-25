@@ -13,14 +13,16 @@
   box-sizing: border-box;
 }
 
+
 html {
   margin: 0;
-/*   padding: 0; */
+  padding: 0;
+  font-family: 'Roboto';
 }
 
 body {
-  font-family: 'Roboto';
   padding-top: var(--header-h);
+  background-color: #FDFBF9;
 }
 
 .title {
@@ -36,7 +38,7 @@ body {
 }
 
 .text {
-  font-size: clamp(1em, 3vw, 1.625em);
+  font-size: clamp(1em, 2vw, 1.625em);
   color: var(--purpl-color);
 }
 
@@ -147,6 +149,7 @@ body {
     height: calc(100dvh - var(--header-h));
     width: 100%;
     z-index: 3000;
+    top: clamp(3.75rem, 13vw, 6.25rem);
     background-color: var(--purpl-color);
     color: var(--gold-color);
     transform: translateX(-100%);
@@ -414,8 +417,8 @@ span {
     background-color: #FDFBF9;
     border: 2px solid var(--purpl-color);
   }
-
 }
+
 
 /* ========== mobile ========== */
 
@@ -425,7 +428,6 @@ span {
   }
 }
 
-  
 /* ========== zyczenia ========== */
 
 
