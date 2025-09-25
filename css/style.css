@@ -266,6 +266,7 @@ span {
 
 .main-screen__content {
   text-align: center;
+  margin-top: -250px;
 }
 
 .main-screen__title {
