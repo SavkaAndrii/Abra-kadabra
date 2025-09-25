@@ -494,6 +494,14 @@ span {
 }
 
 .events__title {
+  .events__title {
+  font-size: clamp(3.8em, 9vw, 8em);
+  line-height: 1;
+  color: var(--gold-color);
+  font-family: 'Lobster';
+  text-align: center;
+  margin-bottom: clamp(3.125rem, 10vw, 6.25rem);
+}
   text-align: center;
   margin-bottom: clamp(3.125rem, 10vw, 6.25rem);
 }
