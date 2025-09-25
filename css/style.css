@@ -501,9 +501,6 @@ span {
   text-align: center;
   margin-bottom: clamp(3.125rem, 10vw, 6.25rem);
 }
-  text-align: center;
-  margin-bottom: clamp(3.125rem, 10vw, 6.25rem);
-}
 
 .events__text {
   text-align: center;
