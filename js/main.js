@@ -1,7 +1,7 @@
 
 console.log('Hello world');
 
-// === Burger toggle + smooth scroll (one place) ===
+// === Burger toggle + smooth scroll (all in one) ===
 (() => {
   const burgerBtn = document.querySelector('.js-burger-toggle-colapse-spin');
   const mobileMenu = document.querySelector('.mobile__menu');
@@ -16,26 +16,40 @@ console.log('Hello world');
     mobileMenu?.classList.toggle('is-open');
   });
 
-  // Плавний скрол по кліку на пункти меню (desktop + mobile)
+  // Плавний скрол по кліку на пункти меню
   document.addEventListener('click', (e) => {
     const link = e.target.closest('.list__link[data-goto]');
     if (!link) return;
 
-    e.preventDefault();
-
-    // Підготуємо селектор цільової секції
     const raw = (link.dataset.goto || '').trim();
-    const selector = (raw.startsWith('.') || raw.startsWith('#')) ? raw : `.${raw}`;
+    const selector = raw.startsWith('.') || raw.startsWith('#') ? raw : `.${raw}`;
     const target = document.querySelector(selector);
-    if (!target) return;
+
+    if (target) {
+      // Якщо секція є на цій сторінці → плавний скрол
+      e.preventDefault();
+
+      const headerH = headerEl ? headerEl.offsetHeight : 0;
+      const top = target.getBoundingClientRect().top + window.scrollY - headerH;
+
+      window.scrollTo({ top, behavior: 'smooth' });
+
+      // Закриваємо мобільне меню
+      mobileMenu?.classList.remove('is-open');
+      burgerBtn?.classList.remove('colapse-spin');
+    }
+    // Якщо секції нема → нічого не блокуємо, браузер піде по href="index.html#about"
+  });
+
+  // Автоскрол після завантаження сторінки з хешем (index.html#about)
+  window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash;
+    if (!hash) return;
+    const el = document.querySelector(hash);
+    if (!el) return;
 
     const headerH = headerEl ? headerEl.offsetHeight : 0;
-    const top = target.getBoundingClientRect().top + window.scrollY - headerH;
-
-    // Закриваємо мобільне меню (якщо відкрите)
-    mobileMenu?.classList.remove('is-open');
-    burgerBtn?.classList.remove('colapse-spin');
-
+    const top = el.getBoundingClientRect().top + window.scrollY - headerH;
     window.scrollTo({ top, behavior: 'smooth' });
   });
 })();
