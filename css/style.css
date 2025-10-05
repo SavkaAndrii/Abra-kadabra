@@ -13,14 +13,16 @@
   box-sizing: border-box;
 }
 
+
 html {
   margin: 0;
-/*   padding: 0; */
+  padding: 0;
+  font-family: 'Roboto';
 }
 
 body {
-  font-family: 'Roboto';
   padding-top: var(--header-h);
+  background-color: #FDFBF9;
 }
 
 .title {
@@ -36,7 +38,7 @@ body {
 }
 
 .text {
-  font-size: clamp(1em, 3vw, 1.625em);
+  font-size: clamp(1em, 2vw, 1.625em);
   color: var(--purpl-color);
 }
 
@@ -147,6 +149,7 @@ body {
     height: calc(100dvh - var(--header-h));
     width: 100%;
     z-index: 3000;
+    top: clamp(3.75rem, 13vw, 6.25rem);
     background-color: var(--purpl-color);
     color: var(--gold-color);
     transform: translateX(-100%);
@@ -263,6 +266,7 @@ span {
 
 .main-screen__content {
   text-align: center;
+  margin-top: -250px;
 }
 
 .main-screen__title {
@@ -414,7 +418,7 @@ span {
     background-color: #FDFBF9;
     border: 2px solid var(--purpl-color);
   }
-
+}
 
 
 /* ========== mobile ========== */
@@ -425,7 +429,7 @@ span {
   }
 }
 
-  /* ========== zyczenia ========== */
+/* ========== zyczenia ========== */
 
 
 .zyczenia {
@@ -491,6 +495,10 @@ span {
 }
 
 .events__title {
+  font-size: clamp(3.8em, 9vw, 8em);
+  line-height: 1;
+  color: var(--gold-color);
+  font-family: 'Lobster';
   text-align: center;
   margin-bottom: clamp(3.125rem, 10vw, 6.25rem);
 }
@@ -511,7 +519,7 @@ span {
 
 .events__item {
   max-width: 550px;
-  flex: 0 1 50%;
+  flex: 1 1 50%;
   padding: 0 10px;
 }
 
@@ -538,4 +546,36 @@ span {
   .events__item {
     margin: 0 auto;
   }
+}
+
+/* ==================== bukiety ==================== */
+
+.bukiety {
+  padding: clamp(3.125rem, 10vw, 6.25rem) 0;
+  background-color: #FDFBF9;
+}
+
+.bukiety__title {
+  text-align: center;
+  margin-bottom: clamp(3.125rem, 10vw, 6.25rem);
+}
+
+.bukiety__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.bukiety__img {
+  max-width: 360px;
+  max-height: 360px;
+}
+
+.bukiety__images {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 10px;
 }
